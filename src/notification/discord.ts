@@ -26,11 +26,8 @@ export function sendDiscordMessage(link: Link, store: Store) {
       try {
         const embed = new Discord.MessageEmbed()
           .setTitle('_**Stock alert!**_')
-          .setDescription(
-            '> provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
-          )
           .setThumbnail(
-            'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-logo.png'
+            'https://e7.pngegg.com/pngimages/521/323/png-clipart-chatbot-robotics-artificial-intelligence-computer-icons-robot-electronics-robot-euclidean-vector-icon-robot-thumbnail.png'
           )
           .setColor('#52b788')
           .setTimestamp();
@@ -65,7 +62,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
             client,
             message: client.send(notifyText.join(' '), {
               embeds: [embed],
-              username: 'streetmerchant',
+              username: 'ginzy_bot',
             }),
           });
         }
